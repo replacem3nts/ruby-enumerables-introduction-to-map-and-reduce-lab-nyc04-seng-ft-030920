@@ -49,13 +49,13 @@ def reduce_to_total(array, start = 0)
 end
 
 def reduce_to_all_true(array)
-  total = start
+  new_array = []
   i = 0
   while i < array.length do
-    total += array[i]
+    new_array << !!array[i]
     i += 1
   end
-  total
+  new_array
 end
   
 def reduce_to_any_true(array)
