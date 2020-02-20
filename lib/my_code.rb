@@ -49,13 +49,15 @@ def reduce_to_total(array, start = 0)
 end
 
 def reduce_to_all_true(array)
-  new_array = []
+  t_or_f = true
   i = 0
   while i < array.length do
-    new_array << (array[i] ? array[i] : !!array[i])
+    if !array[i]
+      return false
+    end
     i += 1
   end
-  new_array
+  t_or_f
 end
   
 def reduce_to_any_true(array)
